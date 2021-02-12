@@ -1,1 +1,22 @@
-<p>user-list works!</p>
+<div class="container">
+    <div class="search-bar">
+        <input #search placeholder="Search..." (keyup.enter)="handleSubmit(search.value)" >
+        <!-- <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon> -->
+    </div>
+    <table>
+        <tr *ngFor="let user of users">
+            <td>
+                <img src={{user.avatar_url}}>
+            </td>
+            <td>
+                {{user.login}}
+            </td>
+            <td>
+                <a class="github-btn" href={{user.html_url}}>Github</a>
+            </td>
+            <td>
+                <a class="more-btn" href={{user.login}}>More Details</a>
+            </td>
+        </tr>
+    </table>
+</div>

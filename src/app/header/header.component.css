@@ -8,13 +8,16 @@
     display: flex;
     /* padding: 10px 20px; */
 }
-.header .search-bar{
+/* .header .search-bar{
     display: flex;
 }
 .header .search-bar input{
     padding: 5px 10px;
     border: #f5f5f5 solid 2px;
-    border-radius: 5px;
+    border-radius: 15px;
     width: 300px;
     font-size: 18px;
 }
+.header .search-bar input:focus{
+    outline: none;
+} */

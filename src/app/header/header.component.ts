@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserListComponent } from '../user-list/user-list.component';
+// import {MatIconModule} from '@angular/material/icon';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private users: UserListComponent) { }
+
+  handleClick = () => {
+    // e.preventDefault()
+    console.log("c")
+    //   console.log(e.currentTarget)
+  }
 
   ngOnInit(): void {
+
   }
 
 }
