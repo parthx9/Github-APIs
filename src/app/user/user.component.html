@@ -1,1 +1,68 @@
 <app-header></app-header>
+<div class="container">
+    <div *ngIf="user" class="main col-md-12">
+        <div class="row">
+            <div class="col-5">
+                <img src={{user.avatar_url}} width="100%"> 
+            </div>
+            <div class="col-7">
+                <div class="details">
+                    <h2 class="name">
+                        {{ user.name }}
+                    </h2>
+                    <p class="username">
+                        {{ user.login }}
+                    </p>
+                    <h5 class="bio">
+                        {{ user.bio }}
+                    </h5>
+                    <div class="follow">
+                        <p class="followers">
+                            <span class="bold">{{user.followers}}</span> Followers
+                        </p>
+                        <p class="following">
+                            <span class="bold">{{user.following}}</span> Following
+                        </p>
+                        <p class="repos">
+                            <span class="bold">{{user.public_repos}}</span> Public Repos
+                        </p>
+                    </div>
+                    <div class="more">
+                        <div class="company">
+                            <mat-icon aria-hidden="true" aria-label="Example home icon">domain</mat-icon>
+                            <p>
+                                {{ user.company }}
+                            </p>
+                        </div>
+                        <div class="location">
+                            <mat-icon aria-hidden="true" aria-label="Example home icon">location_city</mat-icon>
+                            <p>
+                                {{ user.location }}
+                            </p>
+                        </div>
+                        <div class="mail">
+                            <mat-icon aria-hidden="true" aria-label="Example home icon">mail</mat-icon>
+                            <p>
+                                {{ user.email }}
+                            </p>
+                        </div>
+                        <div class="mail">
+                            <mat-icon aria-hidden="true" aria-label="Example home icon">people</mat-icon>
+                            <p>
+                                @{{ user.twitter_username }}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <a class="github" href={{user.html_url}}>
+                            Github
+                        </a>
+                        <a class="website" href={{user.blog}}>
+                            Website
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

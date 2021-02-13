@@ -1,0 +1,65 @@
+
+.container{
+    padding: 30px;
+}
+.main{
+    background: #f5f5f5;
+    color: #333;
+}
+.main img{
+    border-radius: 50%;
+    margin: 20px;
+}
+.main .details{
+    margin: 50px 20px 50px 20px;
+}
+.username{
+    font-weight: 600;
+    margin-bottom: 7px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: grey;
+}
+.main .follow{
+    display: flex;
+}
+.main .follow p{
+    padding: 10px 20px;
+    margin: 15px 20px 15px 0px;
+    border-radius: 15px;
+    color: #f5f5f5;
+}
+.main .bold{
+    font-weight: 700;
+}
+.followers{
+    background: #bd2c00;
+}
+.following{
+    background: #c9510c;
+}
+.repos{
+    background: #6e5494;
+}
+.more .company, .more .location, .more .mail{
+    display: flex;
+}
+.more p{
+    margin: 0px 0px 5px 10px;
+}
+.btns{
+    margin-top: 30px;
+}
+.btns .github, .btns .website{
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: #f5f5f5;
+    margin-right: 20px;
+    font-weight: 500;
+}
+.btns .github{
+    background: #333;
+}
+.btns .website{
+    background: #4078c0;
+}

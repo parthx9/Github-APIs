@@ -6,14 +6,18 @@ import { HttpClient } from '@angular/common/http'
 })
 export class UserDetailsService {
 
-  githubUrl = "https://api.github.com/users"
+  githubUrl = "https://api.github.com"
 
   getUsers = () => {
-    return this.http.get(`${this.githubUrl}`)
+    return this.http.get(`${this.githubUrl}/users`)
   }
 
   searchUsers = (q: String) => {
-    return this.http.get(`https://api.github.com/search/users?q=${q}`)
+    return this.http.get(`${this.githubUrl}/search/users?q=${q}`)
+  }
+
+  getUser = (q: String) => {
+    return this.http.get(`${this.githubUrl}/users/${q}`)
   }
 
   constructor(private http: HttpClient) { }
