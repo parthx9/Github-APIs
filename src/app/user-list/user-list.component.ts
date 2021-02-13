@@ -27,12 +27,11 @@ export class UserListComponent implements OnInit {
   ngOnInit(): void {
     this.userDetails.getUsers()
     .subscribe(
-      (data) => {
-        console.log(data)
+      (data: any) => {
         this.users = data
-        console.log(this.users)
       }
     )
+    
   }
 
 }
