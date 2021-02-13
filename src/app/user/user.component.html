@@ -28,25 +28,25 @@
                         </p>
                     </div>
                     <div class="more">
-                        <div class="company">
+                        <div *ngIf="user.company" class="company">
                             <mat-icon aria-hidden="true" aria-label="Example home icon">domain</mat-icon>
                             <p>
                                 {{ user.company }}
                             </p>
                         </div>
-                        <div class="location">
+                        <div *ngIf="user.location" class="location">
                             <mat-icon aria-hidden="true" aria-label="Example home icon">location_city</mat-icon>
                             <p>
                                 {{ user.location }}
                             </p>
                         </div>
-                        <div class="mail">
+                        <div class="mail" *ngIf="user.email">
                             <mat-icon aria-hidden="true" aria-label="Example home icon">mail</mat-icon>
                             <p>
                                 {{ user.email }}
                             </p>
                         </div>
-                        <div class="mail">
+                        <div *ngIf="user.twitter_username" class="mail">
                             <mat-icon aria-hidden="true" aria-label="Example home icon">people</mat-icon>
                             <p>
                                 @{{ user.twitter_username }}
@@ -57,7 +57,7 @@
                         <a class="github" href={{user.html_url}}>
                             Github
                         </a>
-                        <a class="website" href={{user.blog}}>
+                        <a *ngIf="user.blog" class="website" href={{user.blog}}>
                             Website
                         </a>
                     </div>
